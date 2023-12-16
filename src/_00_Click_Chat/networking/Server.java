@@ -72,4 +72,19 @@ public class Server {
 			e.printStackTrace();
 		}
 	}
+	
+	public void sendMessage(String s) {
+		try {
+			if(os != null) {
+				os.writeObject(s);
+				os.flush();
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void getMessage() {
+		
+	}
 }
